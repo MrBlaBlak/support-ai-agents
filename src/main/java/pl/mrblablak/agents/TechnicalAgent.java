@@ -30,7 +30,7 @@ public class TechnicalAgent {
 
     @Schema(description = "Search internal documentation for a given query and return relevant information.")
     public static Map<String, String> searchDocs(
-            @Schema(name = "query", description = "Search query text") String query) {
+            @Schema(name = "query", description = "Search query text it should be single most important word") String query) {
         String result = DocLoader.search(query);
         return Map.of(
                 "query", query,

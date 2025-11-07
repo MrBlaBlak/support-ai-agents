@@ -113,30 +113,41 @@ src/
 git clone https://github.com/mrblablak/support-ai-agents.git
 cd ai-support-agents
 ```
+### 2. Environment Setup
 
-### 2. **Create `.env` file**
-Add a `.env` file in the project root with your Gemini API key:
-```
-GEMINI_API_KEY=your_api_key_here
-```
+Provide your **Gemini API key** using environment variable.
 
-Alternatively, set it as an environment variable:
+#### Set Environment Variable Manually
+
+##### 🐧 Linux (bash)
 ```bash
 export GEMINI_API_KEY=your_api_key_here
 ```
 
-### 3. **Build & Run**
-You can run this project using Maven or Gradle.
-
-**Using Maven:**
-```bash
-mvn clean install
-mvn exec:java -Dexec.mainClass="pl.mrblablak.agents.AiAgentsApp"
+##### 🪟 Windows (PowerShell)
+```powershell
+$env:GEMINI_API_KEY="your_api_key_here"
 ```
 
-**Using Gradle:**
+---
+
+### 3. Build & Run the Application
+
+#### 🧱 Build
 ```bash
-./gradlew run
+mvn clean install
+```
+
+#### ▶️ Run
+
+##### On Linux (bash)
+```bash
+mvn exec:java -Dexec.mainClass=pl.mrblablak.agents.AiAgentsApp
+```
+
+##### On Windows (PowerShell)
+```powershell
+mvn exec:java "-Dexec.mainClass=pl.mrblablak.agents.AiAgentsApp"
 ```
 
 ### 4. **Run Example Interaction**

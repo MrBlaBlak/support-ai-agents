@@ -20,8 +20,7 @@ public class BillingAgent {
                     When the user asks for:
                     - A refund → use the 'openRefundCase' tool.
                     - Plan or price confirmation → use the 'confirmPlan' tool.
-                    - Refund time explanations → respond directly: refunds are processed within 5–7 business days.
-                    If the request is unrelated to billing, respond: 'This request is outside of billing scope.'
+                    - Refund time explanations → respond directly: refunds are processed within 5 to 7 business days.
                 """)
                 .model("gemini-2.0-flash")
                 .tools(
@@ -36,7 +35,7 @@ public class BillingAgent {
             @Schema(name = "email", description = "Customer email for refund") String email) {
         return Map.of(
                 "email", email,
-                "status", "Refund case created. Expect refund in 5–7 business days."
+                "status", "Refund case created. Expect refund in 5 to 7 business days."
         );
     }
 
