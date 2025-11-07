@@ -111,7 +111,7 @@ src/
 ### 1. **Clone the Repository**
 ```bash
 git clone https://github.com/mrblablak/support-ai-agents.git
-cd ai-support-agents
+cd support-ai-agents
 ```
 ### 2. Environment Setup
 
